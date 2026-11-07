@@ -54,9 +54,16 @@
   },
   "distribution": {
     "extensions": "VS Code Marketplace",
-    "application": "manual merge through User Settings JSON",
+    "application": "manual JSONC merge or optional self-contained Python/Git Bash installer",
     "requiredSetupScripts": false,
-    "binariesBundled": false
+    "binariesBundled": false,
+    "automation": {
+      "python": "scripts/install_vesper.py",
+      "gitBash": "scripts/install-vesper.sh",
+      "requires": "Windows Python 3.9+ (standard library only)",
+      "automaticTarget": "VS Code Stable for Windows, Default profile",
+      "fontBinariesInstalled": false
+    }
   },
   "notes": [
     "Validated versions describe the reference environment; they are not a requirement to install outdated versions.",

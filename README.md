@@ -1,8 +1,8 @@
 # VS Code com Vesper
 
-Configuração de **Vesper Equilibrado + Symbols com pastas neutras**, preparada para aplicar manualmente no VS Code, inclusive em um ambiente corporativo com restrições à execução de scripts.
+Configuração de **Vesper Equilibrado + Symbols com pastas neutras**, com instalador em Python/Git Bash e roteiro manual para ambientes corporativos.
 
-O roteiro usa o Marketplace do próprio VS Code e blocos JSONC que podem ser copiados pelo navegador. Git, terminal, PowerShell, Python, npm e instaladores de configuração não são necessários para aplicar a aparência.
+As extensões vêm do Marketplace do próprio VS Code. Você pode copiar um único instalador pelo navegador ou usar os blocos JSONC manualmente. A automação requer Python 3.9+ do Windows e não usa PowerShell nem bibliotecas externas. O roteiro manual continua disponível sem terminal ou Python.
 
 ![Montagem ilustrativa do Vesper com Symbols em uma amostra sintética de Python](assets/vesper-preview.png)
 
@@ -18,7 +18,37 @@ O roteiro usa o Marketplace do próprio VS Code e blocos JSONC que podem ser cop
 - Minimap e breadcrumbs escondidos; Activity Bar, abas e guias de indentação disponíveis.
 - Fonte Cascadia Code NF, quando instalada, com fallback para Consolas no Windows.
 
-## Comece por aqui
+## Aplicação automática com Python ou Git Bash
+
+Use esta opção no **VS Code Stable para Windows, perfil Default**. Para um perfil nomeado, veja [como informar o arquivo correto](docs/automacao.md#outro-perfil-insiders-portátil-ou-wsl).
+
+1. Salve as configurações abertas no VS Code e evite editá-las enquanto o instalador roda.
+2. Escolha **um** arquivo: [install_vesper.py](scripts/install_vesper.py) para o Prompt de Comando ou [install-vesper.sh](scripts/install-vesper.sh) para o Git Bash. Copie seu conteúdo completo pelo navegador e salve com esse nome em UTF-8. O `.sh` contém o Python embutido: não precisa do `.py` ao lado nem de clonar o repositório.
+3. Na pasta onde salvou o arquivo, simule e depois aplique:
+
+**Prompt de Comando, com Python:**
+
+```bat
+python install_vesper.py --dry-run
+python install_vesper.py
+```
+
+Se o comando disponível for o launcher `py`, troque `python` por `py -3`.
+
+**Git Bash, com o arquivo autossuficiente:**
+
+```sh
+bash install-vesper.sh --dry-run
+bash install-vesper.sh
+```
+
+Ambas as opções aplicam a mesma [réplica completa](settings/replica-completa.jsonc): visual, ícones, Python e fonte do terminal. O instalador instala Vesper e Symbols se ausentes, preserva as demais preferências e faz um backup local antes de alterar um arquivo existente. Rodá-lo novamente com o mesmo preset não duplica as regras nem cria outro backup sem necessidade.
+
+**Fontes:** o instalador configura a família, mas não instala fontes no Windows. Cascadia Code NF precisa já estar instalada para reproduzir a tipografia; caso contrário, o preset usa Consolas. O `.sh` também requer Python 3.9+ do Windows.
+
+[Guia completo da automação](docs/automacao.md), com opções, perfis, diagnóstico e reversão. Se scripts forem restritos no seu computador, use o roteiro manual abaixo.
+
+## Aplicação manual
 
 1. **Guarde uma cópia das suas configurações atuais.** Abra a paleta com `Ctrl+Shift+P`, procure por **Open User Settings (JSON)** / **Configurações do Usuário (JSON)** e copie o conteúdo para um arquivo de backup local.
 2. **Instale Vesper e Symbols pelo VS Code.** No painel de extensões, pesquise pelos IDs exatos da tabela abaixo e clique em **Install / Instalar**. Confirme o publicador.
@@ -228,11 +258,12 @@ Use somente se quiser reproduzir a fonte do terminal do ambiente de referência.
 | [terminal.jsonc](settings/terminal.jsonc) | Reproduzir também a fonte do terminal integrado |
 | [replica-completa.jsonc](settings/replica-completa.jsonc) | Consultar ou reproduzir de uma vez o preset completo validado, incluindo Python e terminal |
 
-Escolha o roteiro em partes **ou** a réplica completa. Você não precisa aplicar ambos. Os arquivos são referências de configuração; o VS Code não lê nem aplica este repositório automaticamente.
+Escolha o roteiro em partes **ou** a réplica completa. Você não precisa aplicar ambos. Os arquivos JSONC são referências; use o instalador acima ou mescle-os manualmente para aplicar.
 
 ## Guia detalhado
 
 - [Instalação manual no ambiente corporativo](docs/instalacao-corporativa.md)
+- [Automação com Python e Git Bash](docs/automacao.md)
 - [Como mesclar os JSON sem perder configurações](docs/aplicar-configuracoes.md)
 - [Fontes e alternativas disponíveis](docs/fontes.md)
 - [O que cada ajuste faz](docs/configuracoes.md)

@@ -2,6 +2,8 @@
 
 Este roteiro considera que a instalação de extensões pelo Marketplace é permitida. A leitura dos arquivos e a aplicação das preferências são manuais, para funcionar mesmo quando scripts e downloads de outros repositórios estão restritos.
 
+Se Python estiver disponível e sua execução for permitida, você também pode usar a [automação com Python ou Git Bash](automacao.md). Ela funciona a partir de um único arquivo copiado pelo navegador, sem dependências externas. O método manual continua disponível quando a automação não for adequada ao ambiente.
+
 ## Consigo abrir o GitHub, mas não baixar arquivos
 
 Expanda os blocos de configuração no [README](../README.md#copiar-as-configurações-direto-desta-página) e copie o texto. Clonar o repositório, baixar ZIP ou acessar o domínio de arquivos raw não são etapas obrigatórias. Os links para a documentação detalhada também podem ser lidos pelo navegador.
