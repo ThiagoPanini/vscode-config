@@ -1,0 +1,5 @@
+// Opcional: reproduz a fonte do terminal integrado do ambiente de referencia.
+// Mantenha sua fonte atual se o terminal corporativo ja usa glifos ou um prompt proprio.
+{
+  "terminal.integrated.fontFamily": "'Cascadia Code NF', Consolas, monospace"
+}

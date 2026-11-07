@@ -1,0 +1,15 @@
+# Preferencias e dados locais
+/.vscode/
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.jsonc
+*.backup.json
+*.before-*.jsonc
+/backups/
+/.local/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

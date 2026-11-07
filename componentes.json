@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "preset": "Vesper Equilibrado + Symbols com pastas neutras",
+  "checkedOn": "2026-11-07",
+  "referenceEnvironment": {
+    "vscode": "1.141.0",
+    "platform": "Windows x64",
+    "remoteWindowAlsoObserved": "WSL"
+  },
+  "appearanceExtensions": [
+    {
+      "id": "raunofreiberg.vesper",
+      "themeSetting": "Vesper",
+      "validatedVersion": "0.0.40",
+      "declaredVSCodeEngine": "^1.75.0",
+      "marketplace": "https://marketplace.visualstudio.com/items?itemName=raunofreiberg.vesper",
+      "source": "https://github.com/raunofreiberg/vesper",
+      "license": "MIT"
+    },
+    {
+      "id": "miguelsolorio.symbols",
+      "iconThemeSetting": "symbols",
+      "validatedVersion": "0.0.26",
+      "declaredVSCodeEngine": "^1.88.0",
+      "marketplace": "https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols",
+      "source": "https://github.com/miguelsolorio/vscode-symbols",
+      "license": "MIT"
+    }
+  ],
+  "editorFont": {
+    "preferredFamily": "Cascadia Code NF",
+    "windowsFallback": "Consolas",
+    "lastFallback": "monospace",
+    "requiredToInstallNewFont": false,
+    "source": "https://github.com/microsoft/cascadia-code",
+    "license": "SIL OFL 1.1"
+  },
+  "optionalPythonProviders": [
+    {
+      "id": "ms-python.python",
+      "requiredForAppearance": false
+    },
+    {
+      "id": "ms-python.vscode-pylance",
+      "requiredForAppearance": false
+    }
+  ],
+  "settings": {
+    "visual": "settings/vesper.jsonc",
+    "python": "settings/python.jsonc",
+    "fontFallback": "settings/fontes-alternativas.jsonc",
+    "terminal": "settings/terminal.jsonc",
+    "completeReference": "settings/replica-completa.jsonc"
+  },
+  "distribution": {
+    "extensions": "VS Code Marketplace",
+    "application": "manual merge through User Settings JSON",
+    "requiredSetupScripts": false,
+    "binariesBundled": false
+  },
+  "notes": [
+    "Validated versions describe the reference environment; they are not a requirement to install outdated versions.",
+    "The declared VS Code engines belong to each extension and do not certify every preset key on all supported releases.",
+    "Cascadia Code NF is optional; the Windows font fallback may render without programming ligatures."
+  ]
+}

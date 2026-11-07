@@ -1,0 +1,7 @@
+// Opcional para Windows: fixa Consolas quando voce prefere a fonte ja disponivel.
+// Consolas nao fornece ligaduras de programacao.
+// Para outra fonte corporativa, altere editor.fontFamily para o nome instalado.
+{
+  "editor.fontFamily": "Consolas, monospace",
+  "editor.fontLigatures": false
+}

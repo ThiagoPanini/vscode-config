@@ -1,0 +1,23 @@
+// Opcional: coloracao semantica de Python usando a paleta do Vesper.
+// Mescle [python] ao bloco existente, preservando formatacao, testes e analise.
+// Requer um provedor de tokens semanticos, como Pylance, para essa camada ter efeito.
+{
+  "[python]": {
+    "editor.semanticHighlighting.enabled": true
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[Vesper]": {
+      "rules": {
+        "variable:python": "#D0D0D0",
+        "parameter:python": "#D0D0D0",
+        "property:python": "#D0D0D0",
+        "variable.readonly:python": "#FFC799",
+        "function:python": "#FFC799",
+        "method:python": "#FFC799",
+        "decorator:python": "#FFC799",
+        "class:python": "#E0E0E0",
+        "type:python": "#E0E0E0"
+      }
+    }
+  }
+}

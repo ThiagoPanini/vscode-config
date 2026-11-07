@@ -1,0 +1,99 @@
+// Preset visual principal: Vesper Equilibrado + Symbols com pastas neutras.
+// Mescle nas configuracoes de usuario ou do perfil. Preserve suas outras chaves.
+// Cascadia Code NF e opcional: Consolas funciona como fallback no Windows.
+{
+  "workbench.colorTheme": "Vesper",
+  "window.autoDetectColorScheme": false,
+  "workbench.iconTheme": "symbols",
+  "editor.fontFamily": "'Cascadia Code NF', Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.fontWeight": "400",
+  "editor.letterSpacing": 0,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "workbench.activityBar.location": "default",
+  "editor.stickyScroll.enabled": true,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.colorCustomizations": {
+    "[Vesper]": {
+      "editor.background": "#101010",
+      "sideBar.background": "#101010",
+      "sideBarSectionHeader.background": "#101010",
+      "activityBar.background": "#101010",
+      "editorGroupHeader.tabsBackground": "#101010",
+      "tab.inactiveBackground": "#101010",
+      "titleBar.activeBackground": "#101010",
+      "titleBar.inactiveBackground": "#101010",
+      "statusBar.background": "#101010",
+      "statusBar.noFolderBackground": "#101010",
+      "tab.border": "#00000000",
+      "sideBar.border": "#00000000",
+      "editorGroup.border": "#00000000",
+      "titleBar.border": "#00000000",
+      "statusBar.border": "#00000000",
+      "editor.findMatchBackground": "#FFC79926",
+      "editor.findMatchBorder": "#FFC79980",
+      "editor.findMatchHighlightBackground": "#FFC79914",
+      "editor.selectionBackground": "#FFFFFF25",
+      "editor.selectionHighlightBackground": "#FFFFFF14",
+      "editor.wordHighlightBackground": "#FFFFFF0F",
+      "editor.wordHighlightStrongBackground": "#FFC79918",
+      "statusBar.debuggingBackground": "#241C17",
+      "statusBar.debuggingForeground": "#FFC799",
+      "statusBarItem.remoteBackground": "#1C1C1C",
+      "statusBarItem.remoteForeground": "#FFC799",
+      "editor.foreground": "#D0D0D0",
+      "editorLineNumber.foreground": "#707070",
+      "editorLineNumber.activeForeground": "#B0B0B0",
+      "tab.activeBackground": "#161616",
+      "input.background": "#1C1C1C",
+      "editorWidget.background": "#101010",
+      "editorHoverWidget.background": "#161616",
+      "editorHoverWidget.border": "#282828",
+      "editorGroupHeader.tabsBorder": "#00000000",
+      "diffEditor.insertedLineBackground": "#99FFE422",
+      "diffEditor.insertedTextBackground": "#99FFE422",
+      "diffEditor.removedLineBackground": "#FF808022",
+      "diffEditor.removedTextBackground": "#FF808022"
+    }
+  },
+  "symbols.hidesExplorerArrows": false,
+  "symbols.folders.associations": {
+    "src": "folder",
+    "tests": "folder",
+    "data": "folder",
+    "notebooks": "folder",
+    ".venv": "folder"
+  },
+  "editor.tokenColorCustomizations": {
+    "[Vesper]": {
+      "comments": "#858585",
+      "textMateRules": [
+        {
+          "name": "Vesper variáveis no tom escolhido",
+          "scope": [
+            "variable",
+            "meta.block variable.other",
+            "support.other.variable",
+            "string constant.other.placeholder"
+          ],
+          "settings": {
+            "foreground": "#D0D0D0"
+          }
+        },
+        {
+          "name": "Vesper delimitadores de comentário legíveis",
+          "scope": "punctuation.definition.comment",
+          "settings": {
+            "foreground": "#858585"
+          }
+        }
+      ]
+    }
+  }
+}
